@@ -1,4 +1,6 @@
+using System;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -47,6 +49,6 @@ public class TimerScript : MonoBehaviour
     {
         int minutes = Mathf.FloorToInt(currentTime / 60);
         int seconds = Mathf.FloorToInt(currentTime % 60);
-        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        timerText.text = ((int)currentTime).ToString();
     }
 }
